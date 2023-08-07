@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Ultra&display=swap");
+
+@import url("../assets/css/jquery-ui.min.css");
+@import url("../assets/plugins/select2/select2.min.css");
+@import url("../assets/plugins/slick/slick-theme.css");
+@import url("../assets/plugins/flowbite/flowbite.min.css");
+@import url("../assets/plugins/slick/slick.css");
+html {
+	scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="number"],
+	input[type="url"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="search"],
+	input[type="tel"],
+	select,
+	select[multiple],
+	textarea {
+		@apply bg-white/30 border border-accent rounded-md ring-0 focus:border-brown focus:ring-brown text-base tracking-wide font-light text-darkest-grey placeholder:text-darkest-grey/50 w-full py-3 px-4 mt-2 placeholder:text-sm;
+		&.sml {
+			@apply rounded-md text-xs py-2 px-4;
+		}
+	}
+	input[type="number"] {
+		-webkit-appearance: textfield;
+		-moz-appearance: textfield;
+		appearance: textfield;
+	}
+
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	select.sml {
+		@apply pl-4 pr-10;
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		@apply border border-accent rounded-sm w-5 h-5 focus:ring-accent/30 tracking-wide font-light text-accent bg-white/30 ring-offset-transparent focus:ring-offset-transparent;
+	}
+	input[type="radio"] {
+		@apply rounded-full;
+	}
+	label {
+		@apply text-darkest-grey text-base font-normal;
+	}
+
+	input[type="file"] {
+		@apply bg-white/30 border border-accent rounded-md ring-0 focus:border-brown focus:ring-brown text-base tracking-wide font-light text-darkest-grey placeholder:text-darkest-grey/50 w-full py-0 px-0 mt-2;
+	}
+	[type="file"]::-webkit-file-upload-button {
+		@apply font-ultra tracking-wider font-normal text-xs bg-accent text-white text-opacity-90 px-2 py-4 hover:bg-opacity-80 transition duration-300 ease-in-out uppercase border-0;
+	}
+	[type="file"]::file-selector-button {
+		@apply font-ultra tracking-wider font-normal text-xs bg-accent text-white text-opacity-90 px-2 py-4 hover:bg-opacity-80 transition duration-300 ease-in-out uppercase border-0;
+	}
+
+	button,
+	.button {
+		@apply font-ultra tracking-wider font-normal text-base md:text-lg bg-accent text-white text-opacity-90 px-5 py-3 rounded-md hover:bg-opacity-80 transition duration-300 ease-in-out w-full uppercase;
+		&.smallBtn {
+			@apply text-xs md:text-sm px-4 rounded-md;
+		}
+	}
+}
